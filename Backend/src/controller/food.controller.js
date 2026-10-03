@@ -69,7 +69,6 @@ catch(err){
 
 }
 
-
 export async function searchFood(req, res) {
     try {
         const { query } = req.body;
@@ -328,3 +327,4 @@ export async function searchFood(req, res) {
         });
     }
 }
+

@@ -19,6 +19,11 @@ const userSchema = new mongoose.Schema({
         enum: ["customer", "admin", "seller"],
         default: "customer"
     },
+    theme: {
+        type: String,
+        enum: ["light", "dark"],
+        default: "dark"
+    },
     verified: {
         type: Boolean,
         default: false

@@ -9,7 +9,6 @@ authRouter.post("/verify-email", authMiddleware.checkEmailBody, authMiddleware.c
 authRouter.post("/resend-otp", authMiddleware.checkEmailBody, authController.resendOTP);
 authRouter.post("/login", authMiddleware.checkEmailBody, authMiddleware.checkPasswordBody, authController.Login);
 authRouter.get("/refresh-token", authMiddleware.checkRefreshToken, authController.refreshToken);
-authRouter.post("/get-me", authMiddleware.checkAccessToken, authController.getMe);
 authRouter.post("/logout", authController.logout);
 authRouter.post("/logout-all-devices", authMiddleware.checkAccessToken, authController.logoutAllDevices);
 authRouter.post("/forgot-password", authMiddleware.checkEmailBody, authController.forgotPassword);
